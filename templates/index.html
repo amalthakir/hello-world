@@ -1,0 +1,19 @@
+{% extends "bootstrap/base.html" %}
+{% block title %} Steering behaviour {% endblock title %}
+
+{% block head %}
+{{ super() }}
+    <script src={{ url_for('send_static' , path='p5.min.js') }}></script>
+    <script src={{ url_for('send_static' , path='p5.dom.min.js') }}></script>
+    <script src={{ url_for('send_static' , path='p5.sound.min.js') }}></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+  {% endblock head %}
+  {% block content %}
+  <body>
+    <script src={{ url_for('send_static' , path='sketch.js') }}></script>
+    <script src={{ url_for('send_static' , path='particle.js') }}></script>
+  
+
+</body>
+{% endblock content %}
