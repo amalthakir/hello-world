@@ -1,6 +1,6 @@
 from flask_bootstrap import Bootstrap
-
-app = Flask(_name_)
+from flask import Flask, render_template, url_for, send_from_directory
+app = Flask(__name__)
 bootstrap = Bootstrap(app)
 
 
@@ -14,5 +14,5 @@ def send_static(path):
     return send_from_directory('static', path)
 
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run()
